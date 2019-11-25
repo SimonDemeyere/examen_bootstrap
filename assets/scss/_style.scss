@@ -1,0 +1,246 @@
+// Roboto
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+$font-roboto: 'Roboto', sans-serif !important;
+
+// Colors
+$color-white: #FFF;
+$color-green: #b0cd3b;
+$color-dark-blue: #282a2e;
+$color-light-blue: #313338;
+$color-brown: #4b3f34;
+
+body {
+  font-family: $font-roboto;
+}
+
+.container-fluid {
+  max-width: 1200px;
+}
+
+.background-dark {
+  background-color: $color-dark-blue;
+}
+
+#header {
+  nav {
+    padding: 0;
+    background-color: $color-dark-blue !important;
+    height: 115px;
+    z-index: 10;
+    position: relative;
+    #brand {
+      margin-left: 25px;
+      >  img {
+      }
+      .navbar-brand {
+        margin-left: 10px;
+        font-size: 24px;
+        color: $color-white;
+      }
+    }
+    .navbar-toggler {
+      margin-right: 25px;
+      text-align: right;
+    }
+    .collapse {
+      background-color: $color-dark-blue;
+      width: 100%;
+      text-align: right;
+      padding-right: 25px;
+
+      ul {
+        li {
+          margin-left: 24px;
+          a {
+            font-size: 16px;
+            color: $color-white;
+            &:hover {
+              color: $color-green;
+            }
+          }
+        }
+      }
+    }
+  }
+  .custom-carousel {
+    position: relative;
+    .carousel-inner {
+      .carousel-item {
+        .carousel-description {
+          position: absolute;
+          top: 38%;
+          left: 12%;
+          color: $color-white;
+          h2 {
+            font-weight: 300;
+            font-size: 28px;
+          }
+          h3 {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#block-services {
+  margin-bottom: 50px;
+  color: $color-white;
+  > h2 {
+    font-weight: 300;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  #services {
+    article {
+      margin-top: 50px;
+      width: 300px;
+      text-align: center;
+      header {
+        > div {
+          margin: 0 auto;
+          background-color: $color-light-blue;
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          img {
+            width: 35px;
+            margin: 0 auto;
+            display: block;
+            padding-top: 30px;
+          }
+        }
+        h3 {
+          font-size: 24px;
+          padding: 15px;
+
+        }
+      }
+      p {
+        font-size: 13px;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+#block-theme {
+  background-color: $color-brown;
+  height: 430px;
+  text-align: center;
+  h2 {
+    font-size: 60px;
+    font-weight: 300;
+    color: $color-white;
+
+  }
+  #theme-btns {
+    .btn {
+      width: 135px;
+      color: $color-white;
+      font-weight: 300;
+      font-size: 16px;
+      margin: 5px;
+    }
+    #btn-purchase {
+      background-color: $color-green;
+      -webkit-box-shadow: 0px 5px 2px -2px rgba(121,143,33,1);
+      -moz-box-shadow: 0px 5px 2px -2px rgba(121,143,33,1);
+      box-shadow: 0px 5px 2px -2px rgba(121,143,33,1);
+    }
+    #btn-follow {
+      background-color: #1bbc9d;
+      -webkit-box-shadow: 0px 5px 2px -2px rgba(31,147,125,1);
+      -moz-box-shadow: 0px 5px 2px -2px rgba(31,147,125,1);
+      box-shadow: 0px 5px 2px -2px rgba(31,147,125,1);
+    }
+  }
+}
+
+#block-portfolio {
+  margin: 50px auto;
+  header {
+    h2 {
+      font-weight: 300;
+      font-size: 36px;
+      color: $color-white;
+      text-align: center;
+    }
+  }
+  #portfolio-types {
+    margin-top: 25px;
+    color: $color-white;
+    text-align: center;
+    a {
+      background-color: $color-light-blue;
+      min-width: 105px;
+      color: $color-white;
+      text-decoration: none;
+      padding: 5px 10px;
+      margin: 5px 10px;
+    }
+  }
+  #portfolio-content {
+    margin-top: 50px;
+    > div {
+      margin: 15px auto;
+      width: 225px;
+      height: 225px;
+      background-color: $color-light-blue;
+
+    }
+  }
+  #portfolio-more {
+    margin-top: 25px;
+    text-align: center;
+    color: $color-white;
+    i {
+      font-size: 2.5rem;
+      color: $color-green;
+      margin-top: -20px;
+    }
+  }
+}
+
+
+@media (min-width: 992px) {
+  #header {
+    nav {
+      #brand {
+        margin-left: 114px;
+      }
+      .collapse {
+        margin-right: 130px;
+      }
+    }
+    .custom-carousel {
+      .carousel-inner {
+        .carousel-item {
+          .carousel-description {
+            top: 230px;
+            color: $color-white;
+            left: 130px;
+            h2 {
+              font-size: 60px;
+            }
+            h3 {
+              font-size: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #block-services {
+    #services {
+      article {
+        padding: 15px;
+      }
+    }
+  }
+  #block-theme {
+    padding-left: 114px;
+  }
+}
