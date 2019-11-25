@@ -9658,6 +9658,7 @@ h3 {
 }
 body {
   font-family: "Roboto", sans-serif !important;
+  background-color: #282a2e;
 }
 
 .container-fluid {
@@ -9809,14 +9810,23 @@ body {
   padding: 5px 10px;
   margin: 5px 10px;
 }
+#block-portfolio #portfolio-types a:hover {
+  background-color: #1bbc9d;
+  -webkit-box-shadow: 0px 5px 2px -2px #1f937d;
+  -moz-box-shadow: 0px 5px 2px -2px #1f937d;
+  box-shadow: 0px 5px 2px -2px #1f937d;
+}
 #block-portfolio #portfolio-content {
   margin-top: 50px;
 }
-#block-portfolio #portfolio-content > div {
+#block-portfolio #portfolio-content .portfolio-content-item {
   margin: 15px auto;
   width: 225px;
   height: 225px;
   background-color: #313338;
+}
+#block-portfolio #portfolio-content .portfolio-content-item .overlay {
+  opacity: 0;
 }
 #block-portfolio #portfolio-more {
   margin-top: 25px;
@@ -9854,6 +9864,37 @@ body {
 
   #block-theme {
     padding-left: 114px;
+  }
+
+  #block-portfolio #portfolio-content .portfolio-content-item {
+    position: relative;
+  }
+  #block-portfolio #portfolio-content .portfolio-content-item .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 225px;
+    width: 225px;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: #232323;
+    color: #FFF;
+    text-align: center;
+  }
+  #block-portfolio #portfolio-content .portfolio-content-item .overlay h2 {
+    margin-top: 50px;
+    font-size: 20px;
+    top: 0;
+  }
+  #block-portfolio #portfolio-content .portfolio-content-item .overlay p {
+    font-size: 16px;
+    font-weight: 300;
+    top: 50px;
+  }
+  #block-portfolio #portfolio-content .portfolio-content-item:hover .overlay {
+    opacity: 1;
   }
 }
 
